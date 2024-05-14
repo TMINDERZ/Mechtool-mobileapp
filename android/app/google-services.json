@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1064863065585",
+    "project_id": "flash-chat-5518e",
+    "storage_bucket": "flash-chat-5518e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064863065585:android:374a4e1a06187b72efd050",
+        "android_client_info": {
+          "package_name": "com.example.flash_chat_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTAvPylggb9ZyDFCL5i54GF0nU3WoiEPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064863065585:android:d6bfd9121a26a336efd050",
+        "android_client_info": {
+          "package_name": "com.uk.ac.wlv.mechtool_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTAvPylggb9ZyDFCL5i54GF0nU3WoiEPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
