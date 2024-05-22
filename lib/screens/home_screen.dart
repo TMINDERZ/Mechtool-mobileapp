@@ -13,6 +13,7 @@ import 'package:mechtool_app/screens/tool_screen.dart';
 import 'package:mechtool_app/screens/welcome_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'login_screen.dart';
+import 'package:flutter/cupertino.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -83,7 +84,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, LoginScreen.id);
+                  showCupertinoDialog(context: context, builder: createDialog);
+                  //Navigator.pushNamed(context, LoginScreen.id);
                 },
                 icon: Icon(
                   Icons.logout_sharp,
@@ -133,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         padding: const EdgeInsets.all(12),
                         child: const Icon(
-                          Icons.account_circle,
+                          Icons.info_outline_rounded,
                           color: Colors.white,
                         ),
                       ),
@@ -248,3 +250,28 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+Widget createDialog(BuildContext context) => CupertinoAlertDialog(
+      title: const Text(
+        'Do You Want To Log Out?.',
+        style: TextStyle(fontSize: 22),
+      ),
+      content: const Text(
+        'if you press yes you will logged out!.',
+        style: TextStyle(fontSize: 22),
+      ),
+      actions: [
+        CupertinoDialogAction(
+          child: const Text('Yes'),
+          onPressed: () {
+            Navigator.pushNamed(context, LoginScreen.id);
+          },
+        ),
+        CupertinoDialogAction(
+          child: const Text('No'),
+          onPressed: () {
+            Navigator.pushNamed(context, HomeScreen.id);
+          },
+        ),
+      ],
+    );

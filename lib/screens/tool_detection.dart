@@ -280,47 +280,15 @@ class _ToolDetectionState extends State<ToolDetection> {
                   children: [
                     ArrowButton(
                       iconImagePath: 'images/tool-box.png',
-                      buttonName: 'TOOL DESCRIPTION',
-                      buttonSubName: 'Description \nof Tool',
+                      buttonName: 'TOOL DETAILS',
+                      buttonSubName:
+                          'Description and more\ninfo about the Tool',
                       onPressed: () {
                         Navigator.pushNamed(context, StoreLocation.id);
                       },
                     ),
                     const SizedBox(
                       height: 15,
-                    ),
-                    //equipment
-                    ArrowButton(
-                      iconImagePath: 'images/bolt.png',
-                      buttonName: 'EQUIPMENT',
-                      buttonSubName: 'Recommended \nEquipments',
-                      onPressed: () {
-                        Navigator.pushNamed(context, EquipmentScreen.id);
-                      },
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    //equipment
-                    ArrowButton(
-                      iconImagePath: 'images/worker.png',
-                      buttonName: 'SAFETY GUIDE',
-                      buttonSubName: 'Safety guide \nfor Tool',
-                      onPressed: () {
-                        Navigator.pushNamed(context, SafetyScreen.id);
-                      },
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    //equipment
-                    ArrowButton(
-                      iconImagePath: 'images/store.png',
-                      buttonName: 'STORE LOCATION',
-                      buttonSubName: 'Store locations \nfor Tool',
-                      onPressed: () {
-                        Navigator.pushNamed(context, SafetyScreen.id);
-                      },
                     ),
                   ],
                 ),

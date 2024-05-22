@@ -1,4 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:mechtool_app/Safety%20Guide/Adjustable%20Wrench%20Safety.dart';
+import 'package:mechtool_app/Safety%20Guide/Claw%20Hammer%20Safety.dart';
+import 'package:mechtool_app/Safety%20Guide/Electric%20Drill%20Safety.dart';
+import 'package:mechtool_app/Safety%20Guide/Screwdriver%20Safety.dart';
+import 'package:mechtool_app/Safety%20Guide/Wrench%20Safety.dart';
 import 'package:mechtool_app/Tools/Adjustable%20Wrench.dart';
 import 'package:mechtool_app/Tools/Claw%20Hammer.dart';
 import 'package:mechtool_app/Tools/Electric%20Drill.dart';
@@ -61,6 +66,12 @@ class MechTool extends StatelessWidget {
         AdjustableWrenchTool.id: (context) => const AdjustableWrenchTool(),
         ElectricDrillTool.id: (context) => const ElectricDrillTool(),
         ClawHammerTool.id: (context) => const ClawHammerTool(),
+        //Safety Guide
+        ScrewdriverSafety.id: (context) => const ScrewdriverSafety(),
+        WrenchSafety.id: (context) => const WrenchSafety(),
+        AdjustableWrenchSafety.id: (context) => const AdjustableWrenchSafety(),
+        ElectricDrillSafety.id: (context) => const ElectricDrillSafety(),
+        ClawHammerSafety.id: (context) => const ClawHammerSafety(),
       },
     );
   }
