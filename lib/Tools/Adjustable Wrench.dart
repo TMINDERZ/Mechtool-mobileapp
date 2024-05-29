@@ -77,7 +77,7 @@ class _AdjustableWrenchToolState extends State<AdjustableWrenchTool> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "images/wrench.jpg",
+                              "images/aw5.jpg",
                               fit: BoxFit.fitHeight,
                             ),
                           ),
@@ -148,7 +148,7 @@ class _AdjustableWrenchToolState extends State<AdjustableWrenchTool> {
                               height: 10,
                             ),
                             Text(
-                              "The screwdriver, a fundamental tool in any toolkit, is a handheld device crafted for the specific task of driving screws into various materials. Its anatomy typically comprises a handle, fashioned from wood, plastic, or rubber for ergonomic grip, and a metallic shaft, often hardened steel, culminating in a tip meticulously designed to match the head of a screw. The diversity of screw heads has led to a plethora of screwdriver types, from the ubiquitous flathead and Phillips to the specialized Torx and hex drivers, each tailored to a particular screw configuration. These tools vary in size, catering to intricate tasks requiring precision as well as larger-scale endeavors demanding robustness. Whether assembling furniture, tinkering with electronics, or tackling construction projects, the screwdriver remains an indispensable companion, facilitating the seamless fastening and unfastening of screws across myriad applications.",
+                              "The adjustable wrench, an essential component of any comprehensive toolkit, is a versatile hand tool designed for gripping and turning nuts and bolts of various sizes. This tool consists of a sturdy handle, typically made from steel or chrome-vanadium, which is both durable and comfortable to hold. At one end of the handle is an adjustable jaw, which can be moved by turning a worm screw located near the tool's head. This allows the wrench to adapt its grip to a wide range of fastener sizes, making it incredibly useful for jobs requiring multiple socket sizes. Known also as a crescent wrench or an adjustable spanner, this tool is invaluable for plumbing, automotive repair, and general maintenance tasks. Its ability to quickly adjust to different fastener sizes not only simplifies work but also reduces the need for carrying multiple fixed-size wrenches, thereby lightening the load and enhancing efficiency in various mechanical and assembly operations.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,

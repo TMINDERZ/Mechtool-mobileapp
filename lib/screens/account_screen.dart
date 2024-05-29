@@ -56,6 +56,59 @@ class _AccountScreenState extends State<AccountScreen> {
           ],
         ),
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            // Logo with white box
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16.0),
+                ),
+                padding: EdgeInsets.all(16.0),
+                child: Image.asset(
+                  'images/logo.png', // Ensure you have a logo image at this path
+                  height: 150.0,
+                ),
+              ),
+            ),
+            SizedBox(height: 16.0),
+            // Description
+            Text(
+              'MECHTOOL',
+              style: TextStyle(
+                fontSize: 32.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 16.0),
+            Text(
+              'Welcome to MECHTOOL, the user-friendly mobile application that helps you identify mechanical hand tools and equipment using artificial intelligence and image recognition. Empower yourself to work faster, smarter, and safer with MECHTOOL!',
+              style: TextStyle(
+                fontSize: 18.0,
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 32.0),
+            Text(
+              'Developed by Minidu Tharinda', // Replace [Your Name] with your actual name
+              style: TextStyle(
+                fontSize: 18.0,
+                fontStyle: FontStyle.italic,
+                color: Colors.grey[300],
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

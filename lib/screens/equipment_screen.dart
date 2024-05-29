@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Equipments/Cables.dart';
+import 'package:mechtool_app/Equipments/Flat%20Screwdriver%20Nails.dart';
+import 'package:mechtool_app/Equipments/Iron%20Nails.dart';
+import 'package:mechtool_app/Equipments/Phillips%20Screwdriver%20nails.dart';
+import 'package:mechtool_app/Equipments/Wrench%20Nuts.dart';
 import 'package:mechtool_app/screens/welcome_screen.dart';
 
 import '../Components/arrow_button.dart';
@@ -77,7 +82,7 @@ class _EquipmentScreenState extends State<EquipmentScreen> {
                       buttonName: 'Iron Nails',
                       buttonSubName: 'Details',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(context, IronNailsEquipment.id);
                       }),
                   const SizedBox(
                     height: 15,
@@ -87,7 +92,8 @@ class _EquipmentScreenState extends State<EquipmentScreen> {
                       buttonName: 'Flat Screwdriver Nails',
                       buttonSubName: 'Details',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(
+                            context, FlatScrewdriverNailEquipment.id);
                       }),
                   const SizedBox(
                     height: 15,
@@ -97,7 +103,8 @@ class _EquipmentScreenState extends State<EquipmentScreen> {
                       buttonName: 'Phillips Screwdriver \nNails',
                       buttonSubName: 'Details',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(
+                            context, PhillipsScrewdriverNailsEquipment.id);
                       }),
                   const SizedBox(
                     height: 15,
@@ -107,17 +114,17 @@ class _EquipmentScreenState extends State<EquipmentScreen> {
                       buttonName: 'Wrench Nuts',
                       buttonSubName: 'Details',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(context, WrenchNutsEquipment.id);
                       }),
                   const SizedBox(
                     height: 15,
                   ),
                   ArrowButton(
                       iconImagePath: 'images/bolt.png',
-                      buttonName: 'Wires',
+                      buttonName: 'Cables',
                       buttonSubName: 'Details',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(context, CablesEquipment.id);
                       }),
                 ],
               )

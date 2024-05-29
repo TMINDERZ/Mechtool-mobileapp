@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Safety%20Guide/Claw%20Hammer%20Safety.dart';
+import 'package:mechtool_app/Safety%20Guide/Wrench%20Safety.dart';
 import 'package:mechtool_app/screens/welcome_screen.dart';
 
 import '../Components/arrow_button.dart';
@@ -77,7 +79,7 @@ class _SafetyScreenState extends State<SafetyScreen> {
                       buttonName: 'Claw Hammer',
                       buttonSubName: 'Guide',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(context, ClawHammerSafety.id);
                       }),
                   const SizedBox(
                     height: 15,
@@ -87,7 +89,7 @@ class _SafetyScreenState extends State<SafetyScreen> {
                       buttonName: 'Wrench',
                       buttonSubName: 'Guide',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(context, WrenchSafety.id);
                       }),
                   const SizedBox(
                     height: 15,

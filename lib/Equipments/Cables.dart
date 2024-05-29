@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:mechtool_app/screens/equipment_screen.dart';
-
 import '../screens/tool_screen.dart';
 import '../screens/welcome_screen.dart';
 
-class IronNailsEquipment extends StatefulWidget {
-  const IronNailsEquipment({super.key});
+class CablesEquipment extends StatefulWidget {
+  const CablesEquipment({super.key});
 
-  static const String id = 'iron_nails';
-
+  static const String id = 'wires_equipment';
   @override
-  State<IronNailsEquipment> createState() => _IronNailsEquipmentState();
+  State<CablesEquipment> createState() => _CablesEquipmentState();
 }
 
-class _IronNailsEquipmentState extends State<IronNailsEquipment> {
+class _CablesEquipmentState extends State<CablesEquipment> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -58,7 +56,7 @@ class _IronNailsEquipmentState extends State<IronNailsEquipment> {
       ),
       appBar: AppBar(
         //Safety Guide
-        title: const Text("Iron Nails"),
+        title: const Text("Flat Screwdriver Nails"),
         backgroundColor: Colors.blue[800],
         centerTitle: true,
       ),
@@ -94,7 +92,7 @@ class _IronNailsEquipmentState extends State<IronNailsEquipment> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Nails",
+                            "Cables",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -105,7 +103,7 @@ class _IronNailsEquipmentState extends State<IronNailsEquipment> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
-                                "Claw Hammer Nails",
+                                "Iron",
                                 style: TextStyle(
                                     color: Colors.white70, fontSize: 18),
                               )
@@ -149,7 +147,7 @@ class _IronNailsEquipmentState extends State<IronNailsEquipment> {
                               height: 10,
                             ),
                             Text(
-                              "Claw hammer nails, commonly referred to as common nails or wire nails, are optimized for use with a claw hammer and are widely utilized in a variety of carpentry and construction projects. These nails are characterized by a thick shank and a flat, wide head that provides a large striking surface, making them easy to drive into wood with a few firm hammer blows. The opposite end of the nail, which is sharp and pointed, allows for easy insertion and reduces wood splitting.",
+                              "Flat screwdriver nails, also known as slotted nails, are designed for specific applications where they can be driven or removed using a flat screwdriver. These nails feature a distinctive head with a horizontal slot, compatible with the tip of a flat screwdriver, allowing for effective torque application. The heads are broader and flatter than standard nails, providing a substantial contact area for the screwdriver and ensuring a firm grip during use. Commonly utilized in decorative or non-structural applications, flat screwdriver nails are often chosen for cabinetry, finish carpentry, and crafts where the nail head's appearance contributes aesthetically to the project.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,

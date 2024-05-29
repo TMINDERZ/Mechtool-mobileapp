@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mechtool_app/Components/arrow_button.dart';
 import 'package:mechtool_app/maps/maps_page.dart';
+import 'package:mechtool_app/maps/maps_page1.dart';
+import 'package:mechtool_app/maps/maps_page3.dart';
+import 'package:mechtool_app/maps/maps_page4.dart';
 import 'package:mechtool_app/screens/home_screen.dart';
 import 'package:mechtool_app/screens/welcome_screen.dart';
+
+import '../maps/maps_page2.dart';
 
 class StoreLocation extends StatefulWidget {
   const StoreLocation({super.key});
@@ -73,8 +78,8 @@ class _StoreLocationState extends State<StoreLocation> {
                 children: [
                   ArrowButton(
                       iconImagePath: 'images/store.png',
-                      buttonName: 'Store 1',
-                      buttonSubName: 'Address 1',
+                      buttonName: 'Rathna Hardware',
+                      buttonSubName: 'No.173 New Kandy Rd',
                       onPressed: () {
                         Navigator.pushNamed(context, MapPage.id);
                       }),
@@ -83,40 +88,40 @@ class _StoreLocationState extends State<StoreLocation> {
                   ),
                   ArrowButton(
                       iconImagePath: 'images/store.png',
-                      buttonName: 'Store 2',
-                      buttonSubName: 'Address 2',
+                      buttonName: 'S.B.C.Hardware',
+                      buttonSubName: '421 Athurugiriya Rd',
                       onPressed: () {
-                        Navigator.pushNamed(context, MapPage.id);
+                        Navigator.pushNamed(context, MapsPage1.id);
                       }),
                   const SizedBox(
                     height: 15,
                   ),
                   ArrowButton(
                       iconImagePath: 'images/store.png',
-                      buttonName: 'Store 3',
-                      buttonSubName: 'Address 3',
+                      buttonName: 'Malabe Hardware stores',
+                      buttonSubName: '649 Athurugiriya Rd',
                       onPressed: () {
-                        Navigator.pushNamed(context, MapPage.id);
+                        Navigator.pushNamed(context, MapsPage2.id);
                       }),
                   const SizedBox(
                     height: 15,
                   ),
                   ArrowButton(
                       iconImagePath: 'images/store.png',
-                      buttonName: 'Store 4',
-                      buttonSubName: 'Address 4',
+                      buttonName: 'Popular Paints and Hardware',
+                      buttonSubName: '182 Kaduwela Rd',
                       onPressed: () {
-                        Navigator.pushNamed(context, MapPage.id);
+                        Navigator.pushNamed(context, MapsPage3.id);
                       }),
                   const SizedBox(
                     height: 15,
                   ),
                   ArrowButton(
                       iconImagePath: 'images/store.png',
-                      buttonName: 'Store 5',
-                      buttonSubName: 'Address 5',
+                      buttonName: 'Soga Hardware',
+                      buttonSubName: '249/5/B New Kandy Rd',
                       onPressed: () {
-                        Navigator.pushNamed(context, MapPage.id);
+                        Navigator.pushNamed(context, MapsPage4.id);
                       }),
                 ],
               )

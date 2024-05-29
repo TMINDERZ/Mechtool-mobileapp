@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_tflite/flutter_tflite.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:mechtool_app/Detected%20item/Detected_Equipment.dart';
 import 'package:mechtool_app/screens/safety_screen.dart';
 import 'package:mechtool_app/screens/store_location.dart';
 import 'package:mechtool_app/screens/tool_detection.dart';
@@ -282,7 +283,7 @@ class _EquipmentDetectionState extends State<EquipmentDetection> {
                       buttonSubName:
                           'Description and more\ninfo about the Equipment',
                       onPressed: () {
-                        Navigator.pushNamed(context, StoreLocation.id);
+                        Navigator.pushNamed(context, DetectedEquipment.id);
                       },
                     ),
                     const SizedBox(

@@ -1,4 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:mechtool_app/Detected%20item/Detected_Equipment.dart';
+import 'package:mechtool_app/Detected%20item/Detected_Tool.dart';
+import 'package:mechtool_app/Equipments/Cables.dart';
+import 'package:mechtool_app/Equipments/Flat%20Screwdriver%20Nails.dart';
+import 'package:mechtool_app/Equipments/Iron%20Nails.dart';
+import 'package:mechtool_app/Equipments/Phillips%20Screwdriver%20nails.dart';
+import 'package:mechtool_app/Equipments/Wrench%20Nuts.dart';
 import 'package:mechtool_app/Safety%20Guide/Adjustable%20Wrench%20Safety.dart';
 import 'package:mechtool_app/Safety%20Guide/Claw%20Hammer%20Safety.dart';
 import 'package:mechtool_app/Safety%20Guide/Electric%20Drill%20Safety.dart';
@@ -10,6 +17,7 @@ import 'package:mechtool_app/Tools/Electric%20Drill.dart';
 import 'package:mechtool_app/Tools/Screwdriver.dart';
 import 'package:mechtool_app/Tools/Wrench.dart';
 import 'package:mechtool_app/maps/maps_page.dart';
+import 'package:mechtool_app/maps/maps_page1.dart';
 import 'package:mechtool_app/screens/account_screen.dart';
 import 'package:mechtool_app/screens/equipment_detection.dart';
 import 'package:mechtool_app/screens/equipment_screen.dart';
@@ -24,6 +32,9 @@ import 'package:mechtool_app/screens/login_screen.dart';
 import 'package:mechtool_app/screens/registration_screen.dart';
 
 import 'firebase_options.dart';
+import 'maps/maps_page2.dart';
+import 'maps/maps_page3.dart';
+import 'maps/maps_page4.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -60,6 +71,11 @@ class MechTool extends StatelessWidget {
         AccountScreen.id: (context) => const AccountScreen(),
         //Maps
         MapPage.id: (context) => const MapPage(),
+        MapsPage1.id: (context) => const MapsPage1(),
+        MapsPage2.id: (context) => const MapsPage2(),
+        MapsPage3.id: (context) => const MapsPage3(),
+        MapsPage4.id: (context) => const MapsPage4(),
+
         //Tools
         ScrewdriverTool.id: (context) => const ScrewdriverTool(),
         WrenchTool.id: (context) => const WrenchTool(),
@@ -72,6 +88,19 @@ class MechTool extends StatelessWidget {
         AdjustableWrenchSafety.id: (context) => const AdjustableWrenchSafety(),
         ElectricDrillSafety.id: (context) => const ElectricDrillSafety(),
         ClawHammerSafety.id: (context) => const ClawHammerSafety(),
+
+        //Equipment
+        CablesEquipment.id: (context) => const CablesEquipment(),
+        FlatScrewdriverNailEquipment.id: (context) =>
+            const FlatScrewdriverNailEquipment(),
+        IronNailsEquipment.id: (context) => const IronNailsEquipment(),
+        PhillipsScrewdriverNailsEquipment.id: (context) =>
+            const PhillipsScrewdriverNailsEquipment(),
+        WrenchNutsEquipment.id: (context) => const WrenchNutsEquipment(),
+
+        //Detected tool/Equipment Screen
+        DetectedTool.id: (context) => const DetectedTool(),
+        DetectedEquipment.id: (context) => const DetectedEquipment(),
       },
     );
   }
