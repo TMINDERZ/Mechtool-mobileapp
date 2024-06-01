@@ -135,7 +135,7 @@ class _AdjustableWrenchSafetyState extends State<AdjustableWrenchSafety> {
                             ),
                             Center(
                               child: Text(
-                                "Tool Details",
+                                "Safety Guide",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black54,
@@ -148,7 +148,7 @@ class _AdjustableWrenchSafetyState extends State<AdjustableWrenchSafety> {
                               height: 10,
                             ),
                             Text(
-                              "The adjustable wrench, an essential component of any comprehensive toolkit, is a versatile hand tool designed for gripping and turning nuts and bolts of various sizes. This tool consists of a sturdy handle, typically made from steel or chrome-vanadium, which is both durable and comfortable to hold. At one end of the handle is an adjustable jaw, which can be moved by turning a worm screw located near the tool's head. This allows the wrench to adapt its grip to a wide range of fastener sizes, making it incredibly useful for jobs requiring multiple socket sizes. Known also as a crescent wrench or an adjustable spanner, this tool is invaluable for plumbing, automotive repair, and general maintenance tasks. Its ability to quickly adjust to different fastener sizes not only simplifies work but also reduces the need for carrying multiple fixed-size wrenches, thereby lightening the load and enhancing efficiency in various mechanical and assembly operations.",
+                              "Ensure the wrench is properly adjusted to the fastener size to avoid slippage. Pull the wrench toward you rather than pushing away to prevent injury if it slips. Inspect the wrench for signs of wear or damage before use and replace if necessary. Always apply force parallel to the handle to avoid twisting and potential tool failure. Keep the wrench clean and lubricated to ensure smooth operation.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
@@ -159,7 +159,7 @@ class _AdjustableWrenchSafetyState extends State<AdjustableWrenchSafety> {
                               height: 10,
                             ),
                             Text(
-                              "YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.",
+                              "YOU SHOULD CHECK TOOL DETAILS FOR MORE INFO.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,

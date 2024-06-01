@@ -5,13 +5,10 @@ import 'package:flutter_tflite/flutter_tflite.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mechtool_app/Detected%20item/Detected_Tool.dart';
 import 'package:mechtool_app/screens/equipment_detection.dart';
-import 'package:mechtool_app/screens/safety_screen.dart';
-import 'package:mechtool_app/screens/store_location.dart';
 import 'package:mechtool_app/screens/welcome_screen.dart';
 
 import '../Components/arrow_button.dart';
 import '../Components/tool_button.dart';
-import 'equipment_screen.dart';
 import 'home_screen.dart';
 import 'dart:developer' as devtools;
 
@@ -280,7 +277,8 @@ class _ToolDetectionState extends State<ToolDetection> {
                       buttonSubName:
                           'Description and more\ninfo about the Tool',
                       onPressed: () {
-                        Navigator.pushNamed(context, DetectedTool.id);
+                        Navigator.pushNamed(context, DetectedTool.id,
+                            arguments: label);
                       },
                     ),
                     const SizedBox(

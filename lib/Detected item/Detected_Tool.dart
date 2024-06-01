@@ -1,12 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:mechtool_app/Equipments/Wrench%20Nuts.dart';
 import 'package:mechtool_app/Safety%20Guide/Adjustable%20Wrench%20Safety.dart';
-import 'package:mechtool_app/Tools/Adjustable%20Wrench.dart';
+import 'package:mechtool_app/Safety%20Guide/Claw%20Hammer%20Safety.dart';
+import 'package:mechtool_app/Equipments/Iron%20Nails.dart';
+import 'package:mechtool_app/Safety%20Guide/Electric%20Drill%20Safety.dart';
+import 'package:mechtool_app/Safety%20Guide/Screwdriver%20Safety.dart';
+import 'package:mechtool_app/Safety%20Guide/Wrench%20Safety.dart';
+
 import 'package:mechtool_app/screens/store_location.dart';
 import 'package:mechtool_app/screens/tool_detection.dart';
 
 import '../Components/tool_button.dart';
+import '../Equipments/Cables.dart';
+import '../Equipments/Phillips Screwdriver nails.dart';
 import '../screens/welcome_screen.dart';
+
+class Tool {
+  final String name;
+  final String subname;
+  final String description;
+  final String imageUrl;
+  final String safety;
+  final String equipment;
+
+  Tool({
+    required this.name,
+    required this.description,
+    required this.imageUrl,
+    required this.subname,
+    required this.safety,
+    required this.equipment,
+  });
+}
 
 class DetectedTool extends StatefulWidget {
   const DetectedTool({super.key});
@@ -18,6 +43,86 @@ class DetectedTool extends StatefulWidget {
 }
 
 class _DetectedToolState extends State<DetectedTool> {
+  late Tool detectedTool;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final String? label = ModalRoute.of(context)!.settings.arguments as String?;
+    if (label != null) {
+      detectedTool = fetchToolDetails(label);
+    } else {
+      detectedTool = Tool(
+        name: 'Unknown Tool',
+        description: 'No details available.',
+        imageUrl: 'images/unknown.jpg',
+        subname: 'Unknown',
+        safety: '',
+        equipment: '',
+      );
+    }
+  }
+
+  Tool fetchToolDetails(String classification) {
+    Map<String, Tool> toolDetails = {
+      'Electric Drill': Tool(
+        name: 'Electric Drill',
+        subname: 'Hand Drill',
+        description:
+            'An electric drill is a versatile power tool used for drilling holes and driving screws. It can be corded or cordless and comes with variable speed settings and reversible rotation. Different drill bits are used for materials like wood, metal, plastic, and masonry. Modern electric drills often include features like built-in lights, ergonomic handles, and keyless chucks for easy bit changes.',
+        imageUrl: 'images/elec.jpeg',
+        safety: ElectricDrillSafety.id,
+        equipment: PhillipsScrewdriverNailsEquipment.id,
+      ),
+      'Screwdriver': Tool(
+        name: 'Screwdriver',
+        subname: 'Flat Head / Phillips Head',
+        description:
+            'A screwdriver is a hand tool used for turning screws. It has a handle and a shaft with a tip that matches the screw head. Common types include flathead, Phillips, Torx, and hex. Screwdrivers come in various sizes to fit different screws. The handles are usually ergonomically designed for comfort and control, and the shafts are made from hardened steel for durability.',
+        imageUrl: 'images/screwdriver.jpg',
+        safety: ScrewdriverSafety.id,
+        equipment: PhillipsScrewdriverNailsEquipment.id,
+      ),
+      'Adjustable wrench': Tool(
+        name: 'Adjustable Wrench',
+        subname: 'Adjustable',
+        description:
+            'An adjustable wrench, also known as a crescent wrench, has a movable jaw that can be adjusted to fit various sizes of nuts and bolts. It is commonly used in plumbing, automotive, and general repair work. The tool is made from high-strength steel and features a smooth jaw to prevent damage to the fasteners. Its versatility and ease of adjustment make it a staple in any toolkit.',
+        imageUrl: 'images/aw5.jpg',
+        safety: AdjustableWrenchSafety.id,
+        equipment: WrenchNutsEquipment.id,
+      ),
+      'claw hammer': Tool(
+        name: 'Claw Hammer',
+        subname: 'Nail Hammer',
+        description:
+            'A claw hammer is a common hand tool with a heavy metal head and a handle made of wood, fiberglass, or steel. The flat side of the head is used for driving nails into wood, while the claw side is used for removing nails and prying apart objects. The hammer head is typically made of forged steel for durability, and the handle is ergonomically designed for a comfortable grip.',
+        imageUrl: 'images/claw.jpg',
+        safety: ClawHammerSafety.id,
+        equipment: IronNailsEquipment.id,
+      ),
+      'wrench': Tool(
+        name: 'Wrench',
+        subname: 'Non Adjustable',
+        description:
+            'A wrench, or spanner, is used to provide grip and mechanical advantage in applying torque to turn objects, typically rotary fasteners like nuts and bolts. Wrenches come in various types, including open-end, box-end, combination, and socket wrenches. They are made from durable materials like chrome vanadium steel and are often coated with anti-corrosion finishes.',
+        imageUrl: 'images/wrench.jpg',
+        safety: WrenchSafety.id,
+        equipment: WrenchNutsEquipment.id,
+      ),
+    };
+
+    return toolDetails[classification] ??
+        Tool(
+          name: 'Unknown Tool',
+          subname: 'Unknown',
+          description: 'No details available.',
+          imageUrl: 'images/picture.jpg',
+          safety: 'Unknown',
+          equipment: 'Unknown',
+        );
+  }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -62,7 +167,7 @@ class _DetectedToolState extends State<DetectedTool> {
       ),
       appBar: AppBar(
         //Safety Guide
-        title: const Text("Adjustable Wrench"),
+        title: const Text("Detected Tool"),
         backgroundColor: Colors.blue[800],
         centerTitle: true,
       ),
@@ -82,7 +187,7 @@ class _DetectedToolState extends State<DetectedTool> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "images/aw5.jpg",
+                              detectedTool.imageUrl,
                               fit: BoxFit.fitHeight,
                             ),
                           ),
@@ -92,14 +197,14 @@ class _DetectedToolState extends State<DetectedTool> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 15),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Wrench",
-                            style: TextStyle(
+                            detectedTool.name,
+                            style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 27,
@@ -109,8 +214,8 @@ class _DetectedToolState extends State<DetectedTool> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
-                                "Adjustable",
-                                style: TextStyle(
+                                detectedTool.subname,
+                                style: const TextStyle(
                                     color: Colors.white70, fontSize: 18),
                               )
                             ],
@@ -132,13 +237,13 @@ class _DetectedToolState extends State<DetectedTool> {
                         ),
                         padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                         width: width,
-                        child: const Column(
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Center(
+                            const Center(
                               child: Text(
                                 "Tool Details",
                                 textAlign: TextAlign.center,
@@ -149,21 +254,21 @@ class _DetectedToolState extends State<DetectedTool> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text(
-                              "The adjustable wrench, an essential component of any comprehensive toolkit, is a versatile hand tool designed for gripping and turning nuts and bolts of various sizes. This tool consists of a sturdy handle, typically made from steel or chrome-vanadium, which is both durable and comfortable to hold. At one end of the handle is an adjustable jaw, which can be moved by turning a worm screw located near the tool's head. This allows the wrench to adapt its grip to a wide range of fastener sizes, making it incredibly useful for jobs requiring multiple socket sizes. Known also as a crescent wrench or an adjustable spanner, this tool is invaluable for plumbing, automotive repair, and general maintenance tasks. Its ability to quickly adjust to different fastener sizes not only simplifies work but also reduces the need for carrying multiple fixed-size wrenches, thereby lightening the load and enhancing efficiency in various mechanical and assembly operations.",
-                              style: TextStyle(
+                              detectedTool.description,
+                              style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
                               ),
                               textAlign: TextAlign.justify,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text(
+                            const Text(
                               "YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.",
                               style: TextStyle(
                                 color: Colors.black,
@@ -185,8 +290,7 @@ class _DetectedToolState extends State<DetectedTool> {
                           iconImagePath: 'images/worker.png',
                           buttonText: 'SAFETY\nGUIDE',
                           onPressed: () {
-                            Navigator.pushNamed(
-                                context, AdjustableWrenchSafety.id);
+                            Navigator.pushNamed(context, detectedTool.safety);
                           },
                         ),
 
@@ -196,7 +300,7 @@ class _DetectedToolState extends State<DetectedTool> {
                           buttonText: 'Equipment\nDETAILS',
                           onPressed: () {
                             Navigator.pushNamed(
-                                context, WrenchNutsEquipment.id);
+                                context, detectedTool.equipment);
                           },
                         ),
                         //Safety Guide button

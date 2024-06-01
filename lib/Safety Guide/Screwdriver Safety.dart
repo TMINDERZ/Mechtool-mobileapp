@@ -135,7 +135,7 @@ class _ScrewdriverSafetyState extends State<ScrewdriverSafety> {
                             ),
                             Center(
                               child: Text(
-                                "Tool Details",
+                                "Safety Guide",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black54,
@@ -148,7 +148,7 @@ class _ScrewdriverSafetyState extends State<ScrewdriverSafety> {
                               height: 10,
                             ),
                             Text(
-                              "The screwdriver, a fundamental tool in any toolkit, is a handheld device crafted for the specific task of driving screws into various materials. Its anatomy typically comprises a handle, fashioned from wood, plastic, or rubber for ergonomic grip, and a metallic shaft, often hardened steel, culminating in a tip meticulously designed to match the head of a screw. The diversity of screw heads has led to a plethora of screwdriver types, from the ubiquitous flathead and Phillips to the specialized Torx and hex drivers, each tailored to a particular screw configuration. These tools vary in size, catering to intricate tasks requiring precision as well as larger-scale endeavors demanding robustness. Whether assembling furniture, tinkering with electronics, or tackling construction projects, the screwdriver remains an indispensable companion, facilitating the seamless fastening and unfastening of screws across myriad applications.",
+                              "Select the correct type and size of screwdriver for the screw to prevent damage. Keep the handle clean and dry to maintain a secure grip. Apply consistent pressure and avoid using excessive force. Inspect the screwdriver for wear or damage, especially the tip, and replace if necessary. Store screwdrivers in a tool organizer to prevent damage and ensure easy access.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
@@ -159,7 +159,7 @@ class _ScrewdriverSafetyState extends State<ScrewdriverSafety> {
                               height: 10,
                             ),
                             Text(
-                              "YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.",
+                              "YOU SHOULD CHECK TOOL DETAILS FOR MORE INFO.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,

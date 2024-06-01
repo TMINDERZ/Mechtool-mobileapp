@@ -56,7 +56,7 @@ class _WrenchNutsEquipmentState extends State<WrenchNutsEquipment> {
       ),
       appBar: AppBar(
         //Safety Guide
-        title: const Text("Flat Screwdriver Nails"),
+        title: const Text("Wrench Nuts"),
         backgroundColor: Colors.blue[800],
         centerTitle: true,
       ),
@@ -134,7 +134,7 @@ class _WrenchNutsEquipmentState extends State<WrenchNutsEquipment> {
                             ),
                             Center(
                               child: Text(
-                                "Tool Details",
+                                "Equipment Details",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black54,

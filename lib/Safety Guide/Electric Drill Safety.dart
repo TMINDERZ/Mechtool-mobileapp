@@ -134,7 +134,7 @@ class _ElectricDrillSafetyState extends State<ElectricDrillSafety> {
                             ),
                             Center(
                               child: Text(
-                                "Tool Details",
+                                "Safety Guide",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black54,
@@ -147,7 +147,7 @@ class _ElectricDrillSafetyState extends State<ElectricDrillSafety> {
                               height: 10,
                             ),
                             Text(
-                              "The electric drill, a pivotal tool in modern construction and home improvement, is engineered for drilling holes and driving fasteners into a variety of materials such as wood, metal, plastic, and masonry. This tool comprises a durable body, typically made from hard plastic and metal, housing a powerful motor that drives the drill bit or screwdriver attachment. The front of the drill features a chuck that can be tightened or loosened to secure various types of bits, allowing for versatility in applications. Most models are equipped with adjustable speed settings and a reverse function, enhancing control and efficiency for both drilling and screwing tasks. Additionally, many electric drills include features such as a hammer function for masonry work, variable torque settings for precision, and ergonomic designs that improve comfort and reduce fatigue during extended use. Whether for professional construction projects, household repairs, or intricate crafting, the electric drill is an indispensable tool, offering robust performance and adaptability across diverse drilling and fastening operations.",
+                              "Always wear safety goggles to protect your eyes from dust and debris. Secure the workpiece with clamps to prevent movement. Use the correct type and size of drill bit for the material. Keep hands and loose clothing away from the rotating bit. Ensure the drill is in good working condition and unplug or remove the battery when changing bits or not in use. Follow the manufacturer’s instructions for maintenance and operation.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
@@ -158,7 +158,7 @@ class _ElectricDrillSafetyState extends State<ElectricDrillSafety> {
                               height: 10,
                             ),
                             Text(
-                              "YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.",
+                              "YOU SHOULD CHECK TOOL DETAILS FOR MORE INFO.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,

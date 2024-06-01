@@ -138,7 +138,7 @@ class _FlatScrewdriverNailEquipmentState
                             ),
                             Center(
                               child: Text(
-                                "Tool Details",
+                                "Equipment Details",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black54,

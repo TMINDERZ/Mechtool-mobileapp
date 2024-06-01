@@ -135,7 +135,7 @@ class _WrenchSafetyState extends State<WrenchSafety> {
                             ),
                             Center(
                               child: Text(
-                                "Tool Details",
+                                "Safety Guide",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black54,
@@ -148,7 +148,7 @@ class _WrenchSafetyState extends State<WrenchSafety> {
                               height: 10,
                             ),
                             Text(
-                              "The non-adjustable wrench, commonly referred to as a fixed wrench, is a fundamental tool designed for delivering high torque to turn nuts, bolts, and other fasteners. Crafted from solid steel or chrome-vanadium, this tool boasts a robust and sleek body engineered to fit specific fastener sizes, ensuring a precise grip and preventing slippage or rounding of the fastener heads. Each end of the wrench is typically shaped to enclose the fastener from both sides, which may either be open-ended or ring-shaped, depending on the design. Open-ended wrenches provide easy access for sliding onto fasteners in tight spaces, while ring wrenches offer a more secure fit by encircling the fastener completely, ideal for high-torque applications. Available in a variety of sizes and styles, including combination wrenches that feature both open and ring ends, the non-adjustable wrench is a staple in automotive, plumbing, and general maintenance work. Its reliability and specific fit make it invaluable for tasks requiring stable and forceful manipulation of fasteners, ensuring efficiency and safety in mechanical and assembly operations.",
+                              "Use the appropriate size wrench to avoid slippage and damage to the fastener. Pull rather than push the wrench to reduce the risk of injury if it slips. Regularly inspect wrenches for cracks or wear and replace if necessary. Ensure the wrench is positioned correctly on the fastener to avoid rounding the edges. Store wrenches in a dry, organized space to prevent rust and ensure they are easy to find.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
@@ -159,7 +159,7 @@ class _WrenchSafetyState extends State<WrenchSafety> {
                               height: 10,
                             ),
                             Text(
-                              "YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.",
+                              "YOU SHOULD CHECK TOOL DETAILS FOR MORE INFO.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,

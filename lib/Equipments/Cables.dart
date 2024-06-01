@@ -56,7 +56,7 @@ class _CablesEquipmentState extends State<CablesEquipment> {
       ),
       appBar: AppBar(
         //Safety Guide
-        title: const Text("Flat Screwdriver Nails"),
+        title: const Text("Cables"),
         backgroundColor: Colors.blue[800],
         centerTitle: true,
       ),
@@ -134,7 +134,7 @@ class _CablesEquipmentState extends State<CablesEquipment> {
                             ),
                             Center(
                               child: Text(
-                                "Tool Details",
+                                "Equipment Details",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black54,
@@ -147,7 +147,7 @@ class _CablesEquipmentState extends State<CablesEquipment> {
                               height: 10,
                             ),
                             Text(
-                              "Flat screwdriver nails, also known as slotted nails, are designed for specific applications where they can be driven or removed using a flat screwdriver. These nails feature a distinctive head with a horizontal slot, compatible with the tip of a flat screwdriver, allowing for effective torque application. The heads are broader and flatter than standard nails, providing a substantial contact area for the screwdriver and ensuring a firm grip during use. Commonly utilized in decorative or non-structural applications, flat screwdriver nails are often chosen for cabinetry, finish carpentry, and crafts where the nail head's appearance contributes aesthetically to the project.",
+                              "Iron cables are strong, flexible wires made of steel or iron strands twisted together. They are used for lifting, pulling, and securing heavy loads in construction, industrial applications, and rigging. Iron cables can withstand high tension and are resistant to stretching. They are often coated with a protective layer to prevent rust and corrosion.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,

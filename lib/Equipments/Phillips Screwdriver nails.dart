@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Components/arrow_button.dart';
+import 'package:mechtool_app/Equipments/Flat%20Screwdriver%20Nails.dart';
 import 'package:mechtool_app/screens/equipment_screen.dart';
 
 import '../screens/tool_screen.dart';
@@ -138,7 +140,7 @@ class _PhillipsScrewdriverNailsEquipmentState
                             ),
                             Center(
                               child: Text(
-                                "Tool Details",
+                                "Equipment Details",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black54,
@@ -172,6 +174,21 @@ class _PhillipsScrewdriverNailsEquipmentState
                           ],
                         ),
                       ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    ArrowButton(
+                      iconImagePath: 'images/bolt.png',
+                      buttonName: 'Flat Screwdriver Nails',
+                      buttonSubName: 'Flat Head',
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, FlatScrewdriverNailEquipment.id);
+                      },
+                    ),
+                    const SizedBox(
+                      height: 10,
                     ),
                   ],
                 ),

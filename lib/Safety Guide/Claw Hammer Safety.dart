@@ -134,7 +134,7 @@ class _ClawHammerSafetyState extends State<ClawHammerSafety> {
                             ),
                             Center(
                               child: Text(
-                                "Tool Details",
+                                "Safety Guide",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black54,
@@ -147,7 +147,7 @@ class _ClawHammerSafetyState extends State<ClawHammerSafety> {
                               height: 10,
                             ),
                             Text(
-                              "The claw hammer, a staple in both household and professional toolboxes, serves as a dual-purpose implement, primarily used for driving nails into various materials and prying them out with ease. It features a sturdy handle, often crafted from wood, fiberglass, or steel, which provides durability and a comfortable grip for sustained use. The head of the hammer is typically made of high-carbon steel, ensuring strength and longevity. One side of the head is flat and is used for hammering, while the other side extends into a curved claw that is expertly designed for removing nails and other fastening elements. The balance and design of the claw hammer make it ideal for a variety of tasks, from simple home repairs and DIY projects to more demanding construction jobs. Its utility in pulling nails, as well as its effectiveness in striking, renders it indispensable for carpentry, upholstery, and building applications, showcasing its versatility and fundamental role in effective tool management.",
+                              "Wear safety glasses to protect against flying debris. Ensure the hammer's head is securely attached to the handle. Use the correct hammer size and type for the job. Strike nails squarely to prevent glancing blows, which can cause nails to bend or break. Keep your work area clear to avoid tripping hazards. Store the hammer in a safe place when not in use.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
@@ -158,7 +158,7 @@ class _ClawHammerSafetyState extends State<ClawHammerSafety> {
                               height: 10,
                             ),
                             Text(
-                              "YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.",
+                              "YOU SHOULD CHECK TOOL DETAILS FOR MORE INFO.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,

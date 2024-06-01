@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Safety%20Guide/Adjustable%20Wrench%20Safety.dart';
 import 'package:mechtool_app/Safety%20Guide/Claw%20Hammer%20Safety.dart';
+import 'package:mechtool_app/Safety%20Guide/Electric%20Drill%20Safety.dart';
+import 'package:mechtool_app/Safety%20Guide/Screwdriver%20Safety.dart';
 import 'package:mechtool_app/Safety%20Guide/Wrench%20Safety.dart';
 import 'package:mechtool_app/screens/welcome_screen.dart';
 
@@ -99,17 +102,17 @@ class _SafetyScreenState extends State<SafetyScreen> {
                       buttonName: 'Electric Drill',
                       buttonSubName: 'Guide',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(context, ElectricDrillSafety.id);
                       }),
                   const SizedBox(
                     height: 15,
                   ),
                   ArrowButton(
                       iconImagePath: 'images/worker.png',
-                      buttonName: 'Pliers',
+                      buttonName: 'Adjustable Wrench',
                       buttonSubName: 'Guide',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(context, AdjustableWrenchSafety.id);
                       }),
                   const SizedBox(
                     height: 15,
@@ -119,7 +122,7 @@ class _SafetyScreenState extends State<SafetyScreen> {
                       buttonName: 'Screwdrivers',
                       buttonSubName: 'Guide',
                       onPressed: () {
-                        Navigator.pushNamed(context, ScrewdriverTool.id);
+                        Navigator.pushNamed(context, ScrewdriverSafety.id);
                       }),
                 ],
               )
