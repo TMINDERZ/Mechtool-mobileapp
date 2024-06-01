@@ -34,12 +34,9 @@ class _ToolDetectionState extends State<ToolDetection> {
     String? res = await Tflite.loadModel(
         model: "assets/model.tflite",
         labels: "assets/lables.txt",
-        numThreads: 1, // defaults to 1
-        isAsset:
-            true, // defaults to true, set to false to load resources outside assets
-        useGpuDelegate:
-            false // defaults to false, set to true to use GPU delegate
-        );
+        numThreads: 1,
+        isAsset: true,
+        useGpuDelegate: false);
   }
 
   pickImageFromGallery() async {
@@ -56,13 +53,12 @@ class _ToolDetectionState extends State<ToolDetection> {
     });
 
     var recognitions = await Tflite.runModelOnImage(
-        path: image.path, // required
-        imageMean: 0, // defaults to 117.0
-        imageStd: 1, // defaults to 1.0
-        numResults: 5, // defaults to 5
-        threshold: 0.1, // defaults to 0.1
-        asynch: true // defaults to true
-        );
+        path: image.path,
+        imageMean: 0,
+        imageStd: 1,
+        numResults: 5,
+        threshold: 0.1,
+        asynch: true);
     print(confidence);
     if (recognitions == null) {
       devtools.log("recognition is null");
@@ -89,13 +85,12 @@ class _ToolDetectionState extends State<ToolDetection> {
     });
 
     var recognitions = await Tflite.runModelOnImage(
-        path: image.path, // required
-        imageMean: 0, // defaults to 117.0
-        imageStd: 1, // defaults to 1.0
-        numResults: 5, // defaults to 5
-        threshold: 0.1, // defaults to 0.1
-        asynch: true // defaults to true
-        );
+        path: image.path,
+        imageMean: 0,
+        imageStd: 1,
+        numResults: 5,
+        threshold: 0.1,
+        asynch: true);
 
     if (recognitions == null) {
       devtools.log("recognition is null");

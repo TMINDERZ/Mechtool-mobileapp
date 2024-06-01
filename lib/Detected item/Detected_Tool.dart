@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Equipments/Wrench%20Nuts.dart';
+import 'package:mechtool_app/Safety%20Guide/Adjustable%20Wrench%20Safety.dart';
+import 'package:mechtool_app/Tools/Adjustable%20Wrench.dart';
+import 'package:mechtool_app/screens/store_location.dart';
 import 'package:mechtool_app/screens/tool_detection.dart';
 
 import '../Components/tool_button.dart';
@@ -178,27 +182,29 @@ class _DetectedToolState extends State<DetectedTool> {
                       children: [
                         //Tool detection button
                         ToolButton(
-                          iconImagePath: 'images/analysis.png',
-                          buttonText: 'TOOL \nDETECT',
+                          iconImagePath: 'images/worker.png',
+                          buttonText: 'SAFETY\nGUIDE',
                           onPressed: () {
-                            Navigator.pushNamed(context, ToolDetection.id);
+                            Navigator.pushNamed(
+                                context, AdjustableWrenchSafety.id);
                           },
                         ),
 
                         //Tools Details button
                         ToolButton(
-                          iconImagePath: 'images/tool-box.png',
-                          buttonText: 'TOOL \nDETAILS',
+                          iconImagePath: 'images/bolt.png',
+                          buttonText: 'Equipment\nDETAILS',
                           onPressed: () {
-                            Navigator.pushNamed(context, ToolDetection.id);
+                            Navigator.pushNamed(
+                                context, WrenchNutsEquipment.id);
                           },
                         ),
                         //Safety Guide button
                         ToolButton(
-                          iconImagePath: 'images/worker.png',
-                          buttonText: 'SAFETY \nGUIDE',
+                          iconImagePath: 'images/store.png',
+                          buttonText: 'STORE\nLOCATION',
                           onPressed: () {
-                            Navigator.pushNamed(context, ToolDetection.id);
+                            Navigator.pushNamed(context, StoreLocation.id);
                           },
                         ),
                       ],

@@ -105,7 +105,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     ),
                     const SizedBox(width: 20),
                     RoundedButton(
-                      title: 'Log in',
+                      title: 'Log In',
                       colour: Colors.blueAccent,
                       onPressed: () {
                         Navigator.pushNamed(context, LoginScreen.id);

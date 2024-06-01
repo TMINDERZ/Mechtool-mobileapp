@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Safety%20Guide/Adjustable%20Wrench%20Safety.dart';
+import 'package:mechtool_app/Tools/Adjustable%20Wrench.dart';
 import 'package:mechtool_app/screens/tool_detection.dart';
 
 import '../Components/tool_button.dart';
+import '../screens/store_location.dart';
 import '../screens/welcome_screen.dart';
 
 class DetectedEquipment extends StatefulWidget {
@@ -149,7 +152,7 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
                               height: 10,
                             ),
                             Text(
-                              "The adjustable wrench, an essential component of any comprehensive toolkit, is a versatile hand tool designed for gripping and turning nuts and bolts of various sizes. This tool consists of a sturdy handle, typically made from steel or chrome-vanadium, which is both durable and comfortable to hold. At one end of the handle is an adjustable jaw, which can be moved by turning a worm screw located near the tool's head. This allows the wrench to adapt its grip to a wide range of fastener sizes, making it incredibly useful for jobs requiring multiple socket sizes. Known also as a crescent wrench or an adjustable spanner, this tool is invaluable for plumbing, automotive repair, and general maintenance tasks. Its ability to quickly adjust to different fastener sizes not only simplifies work but also reduces the need for carrying multiple fixed-size wrenches, thereby lightening the load and enhancing efficiency in various mechanical and assembly operations.",
+                              "Wrench nuts, often referred to as hex nuts, are designed for tightening and loosening with various wrenches, including adjustable and fixed wrenches. These nuts feature a hexagonal exterior, offering multiple flat sides that a wrench can easily grip to apply torque. The hexagonal shape ensures that the force is evenly distributed around the perimeter of the nut, enhancing the efficiency of adjustments.",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
@@ -178,27 +181,29 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
                       children: [
                         //Tool detection button
                         ToolButton(
-                          iconImagePath: 'images/analysis.png',
-                          buttonText: 'TOOL \nDETECT',
+                          iconImagePath: 'images/worker.png',
+                          buttonText: 'SAFETY\nGUIDE',
                           onPressed: () {
-                            Navigator.pushNamed(context, ToolDetection.id);
+                            Navigator.pushNamed(
+                                context, AdjustableWrenchSafety.id);
                           },
                         ),
 
                         //Tools Details button
                         ToolButton(
                           iconImagePath: 'images/tool-box.png',
-                          buttonText: 'TOOL \nDETAILS',
+                          buttonText: 'TOOL\nDETAILS',
                           onPressed: () {
-                            Navigator.pushNamed(context, ToolDetection.id);
+                            Navigator.pushNamed(
+                                context, AdjustableWrenchTool.id);
                           },
                         ),
                         //Safety Guide button
                         ToolButton(
-                          iconImagePath: 'images/worker.png',
-                          buttonText: 'SAFETY \nGUIDE',
+                          iconImagePath: 'images/store.png',
+                          buttonText: 'STORE\nLOCATION',
                           onPressed: () {
-                            Navigator.pushNamed(context, ToolDetection.id);
+                            Navigator.pushNamed(context, StoreLocation.id);
                           },
                         ),
                       ],
