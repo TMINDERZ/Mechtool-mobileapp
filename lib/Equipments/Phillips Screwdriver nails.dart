@@ -82,7 +82,7 @@ class _PhillipsScrewdriverNailsEquipmentState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "images/aw5.jpg",
+                              "images/pn.jpg",
                               fit: BoxFit.fitHeight,
                             ),
                           ),

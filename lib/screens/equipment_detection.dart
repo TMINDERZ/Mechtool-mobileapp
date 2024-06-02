@@ -7,6 +7,7 @@ import 'package:mechtool_app/screens/safety_screen.dart';
 import 'package:mechtool_app/screens/store_location.dart';
 import 'package:mechtool_app/screens/tool_detection.dart';
 import 'package:mechtool_app/screens/welcome_screen.dart';
+import 'package:mechtool_app/Detected%20item/Detected_Equipment.dart';
 import '../Components/arrow_button.dart';
 import '../Components/tool_button.dart';
 import 'equipment_screen.dart';
@@ -283,7 +284,8 @@ class _EquipmentDetectionState extends State<EquipmentDetection> {
                       buttonSubName:
                           'Description and more\ninfo about the Equipment',
                       onPressed: () {
-                        Navigator.pushNamed(context, DetectedEquipment.id);
+                        Navigator.pushNamed(context, DetectedEquipment.id,
+                            arguments: label);
                       },
                     ),
                     const SizedBox(

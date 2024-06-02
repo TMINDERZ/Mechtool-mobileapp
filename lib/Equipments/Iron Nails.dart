@@ -78,7 +78,7 @@ class _IronNailsEquipmentState extends State<IronNailsEquipment> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "images/aw5.jpg",
+                              "images/in.jpg",
                               fit: BoxFit.fitHeight,
                             ),
                           ),

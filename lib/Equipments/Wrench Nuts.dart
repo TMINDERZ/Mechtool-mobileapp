@@ -76,7 +76,7 @@ class _WrenchNutsEquipmentState extends State<WrenchNutsEquipment> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "images/aw5.jpg",
+                              "images/wn.jpg",
                               fit: BoxFit.fitHeight,
                             ),
                           ),

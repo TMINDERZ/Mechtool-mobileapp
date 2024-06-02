@@ -76,7 +76,7 @@ class _CablesEquipmentState extends State<CablesEquipment> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "images/aw5.jpg",
+                              "images/cable.jpg",
                               fit: BoxFit.fitHeight,
                             ),
                           ),

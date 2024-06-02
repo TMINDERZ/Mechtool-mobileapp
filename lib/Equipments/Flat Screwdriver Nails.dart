@@ -80,7 +80,7 @@ class _FlatScrewdriverNailEquipmentState
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "images/aw5.jpg",
+                              "images/flat.jpg",
                               fit: BoxFit.fitHeight,
                             ),
                           ),
