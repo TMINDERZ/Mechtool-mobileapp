@@ -6,7 +6,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:mechtool_app/Detected%20item/Detected_Tool.dart';
 import 'package:mechtool_app/screens/equipment_detection.dart';
 import 'package:mechtool_app/screens/welcome_screen.dart';
-
 import '../Components/arrow_button.dart';
 import '../Components/tool_button.dart';
 import 'home_screen.dart';
@@ -53,7 +52,7 @@ class _ToolDetectionState extends State<ToolDetection> {
         path: image.path,
         imageMean: 0,
         imageStd: 1,
-        numResults: 5,
+        numResults: 6,
         threshold: 0.1,
         asynch: true);
     print(confidence);
@@ -85,7 +84,7 @@ class _ToolDetectionState extends State<ToolDetection> {
         path: image.path,
         imageMean: 0,
         imageStd: 1,
-        numResults: 5,
+        numResults: 6,
         threshold: 0.1,
         asynch: true);
 

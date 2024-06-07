@@ -58,7 +58,7 @@ class _EquipmentDetectionState extends State<EquipmentDetection> {
         path: image.path, // required
         imageMean: 0, // defaults to 117.0
         imageStd: 1, // defaults to 1.0
-        numResults: 2, // defaults to 5
+        numResults: 3, // defaults to 5
         threshold: 0.1, // defaults to 0.1
         asynch: true // defaults to true
         );
@@ -91,7 +91,7 @@ class _EquipmentDetectionState extends State<EquipmentDetection> {
         path: image.path, // required
         imageMean: 0, // defaults to 117.0
         imageStd: 1, // defaults to 1.0
-        numResults: 2, // defaults to 5
+        numResults: 3, // defaults to 5
         threshold: 0.1, // defaults to 0.1
         asynch: true // defaults to true
         );
@@ -280,9 +280,9 @@ class _EquipmentDetectionState extends State<EquipmentDetection> {
                   children: [
                     ArrowButton(
                       iconImagePath: 'images/tool-box.png',
-                      buttonName: 'EQUIPMENT DETAILS',
+                      buttonName: 'EQUIPMENT\nDETAILS',
                       buttonSubName:
-                          'Description and more\ninfo about the Equipment',
+                          'Description and more\ninfo about the\nEquipment',
                       onPressed: () {
                         Navigator.pushNamed(context, DetectedEquipment.id,
                             arguments: label);

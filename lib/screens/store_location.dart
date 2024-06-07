@@ -98,7 +98,7 @@ class _StoreLocationState extends State<StoreLocation> {
                   ),
                   ArrowButton(
                       iconImagePath: 'images/store.png',
-                      buttonName: 'Malabe Hardware stores',
+                      buttonName: 'Malabe Hardware\nstores',
                       buttonSubName: '649 Athurugiriya Rd',
                       onPressed: () {
                         Navigator.pushNamed(context, MapsPage2.id);
@@ -108,7 +108,7 @@ class _StoreLocationState extends State<StoreLocation> {
                   ),
                   ArrowButton(
                       iconImagePath: 'images/store.png',
-                      buttonName: 'Popular Paints and Hardware',
+                      buttonName: 'Popular Paints\nand Hardware',
                       buttonSubName: '182 Kaduwela Rd',
                       onPressed: () {
                         Navigator.pushNamed(context, MapsPage3.id);

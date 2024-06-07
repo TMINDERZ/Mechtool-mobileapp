@@ -53,7 +53,7 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
       detectedEquipment = Equipment(
         name: 'Unknown Tool',
         description: 'No details available.',
-        imageUrl: 'images/unknown.jpg',
+        imageUrl: 'images/picture.png',
         subname: 'Unknown',
         safety: 'Unknown',
         tool: 'Unknown',
@@ -81,6 +81,15 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
         safety: WrenchSafety.id,
         tool: WrenchTool.id,
       ),
+      'Unknown': Equipment(
+        name: 'Unknown',
+        subname: 'Unknown',
+        description: '',
+        imageUrl: 'images/picture.png',
+        safety: "",
+        tool: "",
+      ),
+      //Unknown
     };
 
     return toolDetails[classification] ??

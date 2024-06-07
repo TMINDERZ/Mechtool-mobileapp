@@ -55,7 +55,7 @@ class _DetectedToolState extends State<DetectedTool> {
       detectedTool = Tool(
         name: 'Unknown Tool',
         description: 'No details available.',
-        imageUrl: 'images/unknown.jpg',
+        imageUrl: 'images/picture.png',
         subname: 'Unknown',
         safety: '',
         equipment: '',
@@ -110,6 +110,15 @@ class _DetectedToolState extends State<DetectedTool> {
         safety: WrenchSafety.id,
         equipment: WrenchNutsEquipment.id,
       ),
+      'Unknown': Tool(
+        name: 'Unknown',
+        subname: 'Unknown',
+        description: 'Not available in the system',
+        imageUrl: 'images/picture.png',
+        safety: "",
+        equipment: "",
+      ),
+      //Unknown
     };
 
     return toolDetails[classification] ??
@@ -118,8 +127,8 @@ class _DetectedToolState extends State<DetectedTool> {
           subname: 'Unknown',
           description: 'No details available.',
           imageUrl: 'images/picture.jpg',
-          safety: 'Unknown',
-          equipment: 'Unknown',
+          safety: '',
+          equipment: '',
         );
   }
 
