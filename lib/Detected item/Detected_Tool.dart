@@ -128,7 +128,7 @@ class _DetectedToolState extends State<DetectedTool> {
             name: 'Unknown Tool',
             subname: 'Unknown',
             description: 'No details available.',
-            imageUrl: 'images/picture.jpg',
+            imageUrl: 'images/picture.png',
             safety: '',
             equipment: '',
             short: '');

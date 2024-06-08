@@ -87,7 +87,7 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
       'Unknown': Equipment(
           name: 'Unknown',
           subname: 'Unknown',
-          description: '',
+          description: 'Not available in the system',
           imageUrl: 'images/picture.png',
           safety: "",
           tool: "",
@@ -100,7 +100,7 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
             name: 'Unknown Tool',
             subname: 'Unknown',
             description: 'No details available.',
-            imageUrl: 'images/picture.jpg',
+            imageUrl: 'images/picture.png',
             safety: 'Unknown',
             tool: 'Unknown',
             short: '');

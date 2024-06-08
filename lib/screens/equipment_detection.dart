@@ -53,7 +53,7 @@ class _EquipmentDetectionState extends State<EquipmentDetection> {
             child: ListBody(
               children: <Widget>[
                 Text(
-                  'To get better identification, please capture or input an image that contains only the tool.',
+                  'To get better identification, please capture or input an image that contains only the equipment.',
                   style: TextStyle(fontSize: 16),
                 ),
               ],
