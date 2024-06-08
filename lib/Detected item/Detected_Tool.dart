@@ -22,6 +22,7 @@ class Tool {
   final String imageUrl;
   final String safety;
   final String equipment;
+  final String short;
 
   Tool({
     required this.name,
@@ -30,6 +31,7 @@ class Tool {
     required this.subname,
     required this.safety,
     required this.equipment,
+    required this.short,
   });
 }
 
@@ -53,83 +55,83 @@ class _DetectedToolState extends State<DetectedTool> {
       detectedTool = fetchToolDetails(label);
     } else {
       detectedTool = Tool(
-        name: 'Unknown Tool',
-        description: 'No details available.',
-        imageUrl: 'images/picture.png',
-        subname: 'Unknown',
-        safety: '',
-        equipment: '',
-      );
+          name: 'Unknown Tool',
+          description: 'No details available.',
+          imageUrl: 'images/picture.png',
+          subname: 'Unknown',
+          safety: '',
+          equipment: '',
+          short: '');
     }
   }
 
   Tool fetchToolDetails(String classification) {
     Map<String, Tool> toolDetails = {
       'Electric Drill': Tool(
-        name: 'Electric Drill',
-        subname: 'Hand Drill',
-        description:
-            'An electric drill is a versatile power tool used for drilling holes and driving screws. It can be corded or cordless and comes with variable speed settings and reversible rotation. Different drill bits are used for materials like wood, metal, plastic, and masonry. Modern electric drills often include features like built-in lights, ergonomic handles, and keyless chucks for easy bit changes.',
-        imageUrl: 'images/elec.jpeg',
-        safety: ElectricDrillSafety.id,
-        equipment: PhillipsScrewdriverNailsEquipment.id,
-      ),
+          name: 'Electric Drill',
+          subname: 'Hand Drill',
+          description:
+              'An electric drill is a versatile power tool used for drilling holes and driving screws. It can be corded or cordless and comes with variable speed settings and reversible rotation. Different drill bits are used for materials like wood, metal, plastic, and masonry. Modern electric drills often include features like built-in lights, ergonomic handles, and keyless chucks for easy bit changes.',
+          imageUrl: 'images/elec.jpeg',
+          safety: ElectricDrillSafety.id,
+          equipment: PhillipsScrewdriverNailsEquipment.id,
+          short: 'YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.'),
       'Screwdriver': Tool(
-        name: 'Screwdriver',
-        subname: 'Flat Head / Phillips Head',
-        description:
-            'A screwdriver is a hand tool used for turning screws. It has a handle and a shaft with a tip that matches the screw head. Common types include flathead, Phillips, Torx, and hex. Screwdrivers come in various sizes to fit different screws. The handles are usually ergonomically designed for comfort and control, and the shafts are made from hardened steel for durability.',
-        imageUrl: 'images/screwdriver.jpg',
-        safety: ScrewdriverSafety.id,
-        equipment: PhillipsScrewdriverNailsEquipment.id,
-      ),
+          name: 'Screwdriver',
+          subname: 'Flat Head / Phillips Head',
+          description:
+              'A screwdriver is a hand tool used for turning screws. It has a handle and a shaft with a tip that matches the screw head. Common types include flathead, Phillips, Torx, and hex. Screwdrivers come in various sizes to fit different screws. The handles are usually ergonomically designed for comfort and control, and the shafts are made from hardened steel for durability.',
+          imageUrl: 'images/screwdriver.jpg',
+          safety: ScrewdriverSafety.id,
+          equipment: PhillipsScrewdriverNailsEquipment.id,
+          short: 'YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.'),
       'Adjustable wrench': Tool(
-        name: 'Adjustable Wrench',
-        subname: 'Adjustable',
-        description:
-            'An adjustable wrench, also known as a crescent wrench, has a movable jaw that can be adjusted to fit various sizes of nuts and bolts. It is commonly used in plumbing, automotive, and general repair work. The tool is made from high-strength steel and features a smooth jaw to prevent damage to the fasteners. Its versatility and ease of adjustment make it a staple in any toolkit.',
-        imageUrl: 'images/aw5.jpg',
-        safety: AdjustableWrenchSafety.id,
-        equipment: WrenchNutsEquipment.id,
-      ),
+          name: 'Adjustable Wrench',
+          subname: 'Adjustable',
+          description:
+              'An adjustable wrench, also known as a crescent wrench, has a movable jaw that can be adjusted to fit various sizes of nuts and bolts. It is commonly used in plumbing, automotive, and general repair work. The tool is made from high-strength steel and features a smooth jaw to prevent damage to the fasteners. Its versatility and ease of adjustment make it a staple in any toolkit.',
+          imageUrl: 'images/aw5.jpg',
+          safety: AdjustableWrenchSafety.id,
+          equipment: WrenchNutsEquipment.id,
+          short: 'YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.'),
       'claw hammer': Tool(
-        name: 'Claw Hammer',
-        subname: 'Nail Hammer',
-        description:
-            'A claw hammer is a common hand tool with a heavy metal head and a handle made of wood, fiberglass, or steel. The flat side of the head is used for driving nails into wood, while the claw side is used for removing nails and prying apart objects. The hammer head is typically made of forged steel for durability, and the handle is ergonomically designed for a comfortable grip.',
-        imageUrl: 'images/claw.jpg',
-        safety: ClawHammerSafety.id,
-        equipment: IronNailsEquipment.id,
-      ),
+          name: 'Claw Hammer',
+          subname: 'Nail Hammer',
+          description:
+              'A claw hammer is a common hand tool with a heavy metal head and a handle made of wood, fiberglass, or steel. The flat side of the head is used for driving nails into wood, while the claw side is used for removing nails and prying apart objects. The hammer head is typically made of forged steel for durability, and the handle is ergonomically designed for a comfortable grip.',
+          imageUrl: 'images/claw.jpg',
+          safety: ClawHammerSafety.id,
+          equipment: IronNailsEquipment.id,
+          short: 'YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.'),
       'wrench': Tool(
-        name: 'Wrench',
-        subname: 'Non Adjustable',
-        description:
-            'A wrench, or spanner, is used to provide grip and mechanical advantage in applying torque to turn objects, typically rotary fasteners like nuts and bolts. Wrenches come in various types, including open-end, box-end, combination, and socket wrenches. They are made from durable materials like chrome vanadium steel and are often coated with anti-corrosion finishes.',
-        imageUrl: 'images/wrench.jpg',
-        safety: WrenchSafety.id,
-        equipment: WrenchNutsEquipment.id,
-      ),
+          name: 'Wrench',
+          subname: 'Non Adjustable',
+          description:
+              'A wrench, or spanner, is used to provide grip and mechanical advantage in applying torque to turn objects, typically rotary fasteners like nuts and bolts. Wrenches come in various types, including open-end, box-end, combination, and socket wrenches. They are made from durable materials like chrome vanadium steel and are often coated with anti-corrosion finishes.',
+          imageUrl: 'images/wrench.jpg',
+          safety: WrenchSafety.id,
+          equipment: WrenchNutsEquipment.id,
+          short: 'YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.'),
       'Unknown': Tool(
-        name: 'Unknown',
-        subname: 'Unknown',
-        description: 'Not available in the system',
-        imageUrl: 'images/picture.png',
-        safety: "",
-        equipment: "",
-      ),
+          name: 'Unknown',
+          subname: 'Unknown',
+          description: 'Not available in the system',
+          imageUrl: 'images/picture.png',
+          safety: "",
+          equipment: "",
+          short: ''),
       //Unknown
     };
 
     return toolDetails[classification] ??
         Tool(
-          name: 'Unknown Tool',
-          subname: 'Unknown',
-          description: 'No details available.',
-          imageUrl: 'images/picture.jpg',
-          safety: '',
-          equipment: '',
-        );
+            name: 'Unknown Tool',
+            subname: 'Unknown',
+            description: 'No details available.',
+            imageUrl: 'images/picture.jpg',
+            safety: '',
+            equipment: '',
+            short: '');
   }
 
   @override
@@ -138,13 +140,6 @@ class _DetectedToolState extends State<DetectedTool> {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.blue[800],
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: Colors.blueAccent,
-          child: const Icon(
-            Icons.health_and_safety_outlined,
-            size: 20,
-          )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[700],
@@ -277,9 +272,9 @@ class _DetectedToolState extends State<DetectedTool> {
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
-                              "YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.",
-                              style: TextStyle(
+                            Text(
+                              detectedTool.short,
+                              style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
                               ),

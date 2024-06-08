@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Safety%20Guide/Screwdriver%20Safety.dart';
 import 'package:mechtool_app/screens/tool_screen.dart';
 
 import '../screens/welcome_screen.dart';
@@ -20,7 +21,9 @@ class _ScrewdriverToolState extends State<ScrewdriverTool> {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, ScrewdriverSafety.id);
+          },
           backgroundColor: Colors.blueAccent,
           child: const Icon(
             Icons.health_and_safety_outlined,

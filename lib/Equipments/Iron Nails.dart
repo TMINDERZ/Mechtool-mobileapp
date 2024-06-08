@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Safety%20Guide/Claw%20Hammer%20Safety.dart';
+import 'package:mechtool_app/Tools/Claw%20Hammer.dart';
 import 'package:mechtool_app/screens/equipment_screen.dart';
 
 import '../screens/tool_screen.dart';
@@ -21,7 +23,9 @@ class _IronNailsEquipmentState extends State<IronNailsEquipment> {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, ClawHammerSafety.id);
+          },
           backgroundColor: Colors.blueAccent,
           child: const Icon(
             Icons.health_and_safety_outlined,

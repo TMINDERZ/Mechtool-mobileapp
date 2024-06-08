@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Safety%20Guide/Wrench%20Safety.dart';
 import 'package:mechtool_app/screens/equipment_screen.dart';
 import '../screens/welcome_screen.dart';
 
@@ -19,7 +20,9 @@ class _WrenchNutsEquipmentState extends State<WrenchNutsEquipment> {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, WrenchSafety.id);
+          },
           backgroundColor: Colors.blueAccent,
           child: const Icon(
             Icons.health_and_safety_outlined,

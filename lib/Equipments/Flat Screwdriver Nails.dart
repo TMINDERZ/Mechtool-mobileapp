@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Safety%20Guide/Screwdriver%20Safety.dart';
 import 'package:mechtool_app/screens/equipment_screen.dart';
 
 import '../screens/tool_screen.dart';
@@ -23,7 +24,9 @@ class _FlatScrewdriverNailEquipmentState
     return Scaffold(
       backgroundColor: Colors.blue[800],
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, ScrewdriverSafety.id);
+          },
           backgroundColor: Colors.blueAccent,
           child: const Icon(
             Icons.health_and_safety_outlined,

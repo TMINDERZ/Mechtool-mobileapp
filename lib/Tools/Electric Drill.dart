@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Safety%20Guide/Electric%20Drill%20Safety.dart';
 
 import '../screens/tool_screen.dart';
 import '../screens/welcome_screen.dart';
@@ -19,7 +20,9 @@ class _ElectricDrillToolState extends State<ElectricDrillTool> {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, ElectricDrillSafety.id);
+          },
           backgroundColor: Colors.blueAccent,
           child: const Icon(
             Icons.health_and_safety_outlined,
@@ -56,7 +59,7 @@ class _ElectricDrillToolState extends State<ElectricDrillTool> {
       ),
       appBar: AppBar(
         //Safety Guide
-        title: const Text("Wrench"),
+        title: const Text("Electric Drill"),
         backgroundColor: Colors.blue[800],
         centerTitle: true,
       ),

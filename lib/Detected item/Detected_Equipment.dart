@@ -20,6 +20,7 @@ class Equipment {
   final String imageUrl;
   final String safety;
   final String tool;
+  final String short;
 
   Equipment({
     required this.name,
@@ -28,6 +29,7 @@ class Equipment {
     required this.subname,
     required this.safety,
     required this.tool,
+    required this.short,
   });
 }
 
@@ -57,6 +59,7 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
         subname: 'Unknown',
         safety: 'Unknown',
         tool: 'Unknown',
+        short: '',
       );
     }
   }
@@ -64,43 +67,43 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
   Equipment fetchEquipmentDetails(String classification) {
     Map<String, Equipment> toolDetails = {
       'Iron Nails': Equipment(
-        name: 'Iron Nails',
-        subname: 'Claw Hammer Nails',
-        description:
-            'Claw hammer nails, commonly referred to as common nails or wire nails, are optimized for use with a claw hammer and are widely utilized in a variety of carpentry and construction projects. These nails are characterized by a thick shank and a flat, wide head that provides a large striking surface, making them easy to drive into wood with a few firm hammer blows. The opposite end of the nail, which is sharp and pointed, allows for easy insertion and reduces wood splitting.',
-        imageUrl: 'images/in.jpg',
-        safety: ClawHammerSafety.id,
-        tool: ClawHammerTool.id,
-      ),
+          name: 'Iron Nails',
+          subname: 'Claw Hammer Nails',
+          description:
+              'Claw hammer nails, commonly referred to as common nails or wire nails, are optimized for use with a claw hammer and are widely utilized in a variety of carpentry and construction projects. These nails are characterized by a thick shank and a flat, wide head that provides a large striking surface, making them easy to drive into wood with a few firm hammer blows. The opposite end of the nail, which is sharp and pointed, allows for easy insertion and reduces wood splitting.',
+          imageUrl: 'images/in.jpg',
+          safety: ClawHammerSafety.id,
+          tool: ClawHammerTool.id,
+          short: 'YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.'),
       'Wrench Nuts': Equipment(
-        name: 'Wrench Nuts',
-        subname: 'Iron Nuts',
-        description:
-            'Wrench nuts, often referred to as hex nuts, are designed for tightening and loosening with various wrenches, including adjustable and fixed wrenches. These nuts feature a hexagonal exterior, offering multiple flat sides that a wrench can easily grip to apply torque. The hexagonal shape ensures that the force is evenly distributed around the perimeter of the nut, enhancing the efficiency of adjustments.',
-        imageUrl: 'images/wn.jpg',
-        safety: WrenchSafety.id,
-        tool: WrenchTool.id,
-      ),
+          name: 'Wrench Nuts',
+          subname: 'Iron Nuts',
+          description:
+              'Wrench nuts, often referred to as hex nuts, are designed for tightening and loosening with various wrenches, including adjustable and fixed wrenches. These nuts feature a hexagonal exterior, offering multiple flat sides that a wrench can easily grip to apply torque. The hexagonal shape ensures that the force is evenly distributed around the perimeter of the nut, enhancing the efficiency of adjustments.',
+          imageUrl: 'images/wn.jpg',
+          safety: WrenchSafety.id,
+          tool: WrenchTool.id,
+          short: 'YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.'),
       'Unknown': Equipment(
-        name: 'Unknown',
-        subname: 'Unknown',
-        description: '',
-        imageUrl: 'images/picture.png',
-        safety: "",
-        tool: "",
-      ),
+          name: 'Unknown',
+          subname: 'Unknown',
+          description: '',
+          imageUrl: 'images/picture.png',
+          safety: "",
+          tool: "",
+          short: ''),
       //Unknown
     };
 
     return toolDetails[classification] ??
         Equipment(
-          name: 'Unknown Tool',
-          subname: 'Unknown',
-          description: 'No details available.',
-          imageUrl: 'images/picture.jpg',
-          safety: 'Unknown',
-          tool: 'Unknown',
-        );
+            name: 'Unknown Tool',
+            subname: 'Unknown',
+            description: 'No details available.',
+            imageUrl: 'images/picture.jpg',
+            safety: 'Unknown',
+            tool: 'Unknown',
+            short: '');
   }
 
   @override
@@ -109,13 +112,6 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.blue[800],
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: Colors.blueAccent,
-          child: const Icon(
-            Icons.health_and_safety_outlined,
-            size: 20,
-          )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[700],
@@ -248,9 +244,9 @@ class _DetectedEquipmentState extends State<DetectedEquipment> {
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
-                              "YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.",
-                              style: TextStyle(
+                            Text(
+                              detectedEquipment.short,
+                              style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
                               ),

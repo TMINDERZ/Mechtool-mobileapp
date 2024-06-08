@@ -23,13 +23,6 @@ class _StoreLocationState extends State<StoreLocation> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[800],
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: Colors.blueAccent,
-          child: const Icon(
-            Icons.add_circle_outline,
-            size: 20,
-          )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[700],

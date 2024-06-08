@@ -18,13 +18,6 @@ class _CablesEquipmentState extends State<CablesEquipment> {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.blue[800],
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: Colors.blueAccent,
-          child: const Icon(
-            Icons.health_and_safety_outlined,
-            size: 20,
-          )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[700],
@@ -156,14 +149,6 @@ class _CablesEquipmentState extends State<CablesEquipment> {
                             ),
                             SizedBox(
                               height: 10,
-                            ),
-                            Text(
-                              "YOU SHOULD CHECK SAFETY INSTRUCTIONS FOR SAFE USE.",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                              ),
-                              textAlign: TextAlign.center,
                             ),
                           ],
                         ),

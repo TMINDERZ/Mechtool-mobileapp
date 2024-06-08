@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Tools/Claw%20Hammer.dart';
 import 'package:mechtool_app/screens/safety_screen.dart';
 
 import '../screens/welcome_screen.dart';
@@ -19,10 +20,12 @@ class _ClawHammerSafetyState extends State<ClawHammerSafety> {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, ClawHammerTool.id);
+          },
           backgroundColor: Colors.blueAccent,
           child: const Icon(
-            Icons.health_and_safety_outlined,
+            Icons.plumbing_sharp,
             size: 20,
           )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

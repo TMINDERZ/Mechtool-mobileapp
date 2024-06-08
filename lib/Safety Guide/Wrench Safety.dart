@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mechtool_app/Tools/Wrench.dart';
 import 'package:mechtool_app/screens/safety_screen.dart';
 
 import '../screens/welcome_screen.dart';
@@ -20,10 +21,12 @@ class _WrenchSafetyState extends State<WrenchSafety> {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, WrenchTool.id);
+          },
           backgroundColor: Colors.blueAccent,
           child: const Icon(
-            Icons.health_and_safety_outlined,
+            Icons.plumbing_sharp,
             size: 20,
           )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

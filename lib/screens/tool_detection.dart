@@ -35,6 +35,38 @@ class _ToolDetectionState extends State<ToolDetection> {
         useGpuDelegate: false);
   }
 
+  Future<void> _showMessageAndProceed(Function action) async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible:
+          false, // User must tap a button to dismiss the dialog.
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Important Message'),
+          content: const SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text(
+                  'To get better identification, please capture or input an image that contains only the tool.',
+                  style: TextStyle(fontSize: 16),
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('OK'),
+              onPressed: () {
+                Navigator.of(context).pop();
+                action();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   pickImageFromGallery() async {
     final ImagePicker picker = ImagePicker();
     // Pick an image.
@@ -119,7 +151,7 @@ class _ToolDetectionState extends State<ToolDetection> {
       backgroundColor: Colors.blue[800],
       floatingActionButton: FloatingActionButton(
           onPressed: () {
-            pickImageFromCamera();
+            _showMessageAndProceed(pickImageFromCamera);
           },
           backgroundColor: Colors.blueAccent,
           child: const Icon(
@@ -250,7 +282,7 @@ class _ToolDetectionState extends State<ToolDetection> {
                       iconImagePath: 'images/camera.png',
                       buttonText: 'Get Using \nCamera',
                       onPressed: () {
-                        pickImageFromCamera();
+                        _showMessageAndProceed(pickImageFromCamera);
                       },
                     ),
                     //Gallery Access button
@@ -259,7 +291,6 @@ class _ToolDetectionState extends State<ToolDetection> {
                       buttonText: 'Pick From \nGallery',
                       onPressed: () {
                         pickImageFromGallery();
-                        // Navigator.pushNamed(context, SafetyScreen.id);
                       },
                     ),
                   ],

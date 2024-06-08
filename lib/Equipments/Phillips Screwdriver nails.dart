@@ -3,6 +3,7 @@ import 'package:mechtool_app/Components/arrow_button.dart';
 import 'package:mechtool_app/Equipments/Flat%20Screwdriver%20Nails.dart';
 import 'package:mechtool_app/screens/equipment_screen.dart';
 
+import '../Safety Guide/Screwdriver Safety.dart';
 import '../screens/tool_screen.dart';
 import '../screens/welcome_screen.dart';
 
@@ -25,7 +26,9 @@ class _PhillipsScrewdriverNailsEquipmentState
     return Scaffold(
       backgroundColor: Colors.blue[800],
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, ScrewdriverSafety.id);
+          },
           backgroundColor: Colors.blueAccent,
           child: const Icon(
             Icons.health_and_safety_outlined,
